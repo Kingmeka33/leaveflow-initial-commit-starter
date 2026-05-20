@@ -12,6 +12,7 @@ interface NavItem {
   label: string;
   icon: ReactNode;
   adminOnly?: boolean;
+  employeeOnly?: Boolean;
 }
 
 const navItems: NavItem[] = [
@@ -28,7 +29,11 @@ export function Layout({ children }: { children: ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const isAdmin = profile?.role === 'admin';
-  const visibleNav = navItems.filter(n => !n.adminOnly || isAdmin);
+  const visibleNav = navItems.filter(n => {
+  if (n.adminOnly && !isAdmin) return false;
+  if (n.employeeOnly && isAdmin) return false;
+  return true;
+});
 
   async function handleSignOut() {
     await signOut();
