@@ -17,11 +17,10 @@ http://localhost:3000/health
 ## Planned backend work
 
 - `feature/authentication`
-- `feature/jwt-security`
-- `feature/flyway-migrations`
-- `feature/role-based-access`
+- `feature/config`
+- `feature/resources`
 - `feature/leave-requests`
-- `feature/leave-approval`
-- `feature/s3-file-upload`
-- `feature/document-validation`
-- `feature/dashboard`
+- `feature/storage`
+- `feature/common`
+- `feature/users`
+- `feature/docs`
