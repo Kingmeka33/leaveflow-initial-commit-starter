@@ -16,7 +16,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { to: '/dashboard', label: 'Dashboard', icon: <LayoutDashboard size={18} /> },
-  { to: '/my-leaves', label: 'My Leaves', icon: <Calendar size={18} /> },
+  { to: '/my-leaves', label: 'My Leaves', icon: <Calendar size={18} />, employeeOnly: true },
   { to: '/admin/requests', label: 'All Requests', icon: <ClipboardList size={18} />, adminOnly: true },
   { to: '/admin/employees', label: 'Employees', icon: <Users size={18} />, adminOnly: true },
 ];
