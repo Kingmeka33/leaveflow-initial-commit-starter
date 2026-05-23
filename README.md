@@ -411,6 +411,3 @@ Preventing unsupported files.
 - Redis Caching
 
 
-# License
-
-This project is for educational and portfolio purp
